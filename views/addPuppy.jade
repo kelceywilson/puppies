@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Add a puppy
+  form(action='/api/puppies', method='POST')
+    label Please enter the puppy's name:
+      input(type='text', name='name')
+    label Please enter the puppy's breed:
+      input(type='text', name='breed')
+    label Please enter the puppy's age:
+      input(type='number', name='age')
+    label Please enter the puppy's gender:
+      input(type='text', name='sex')
+    button(type='submit') Add

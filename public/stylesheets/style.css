@@ -1,0 +1,26 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+p {
+  margin: 5px 10px;
+}
+button {
+  width: 200px;
+}
+.flexBoxColumn {
+  display: flex;
+  flex-direction: column;
+  /*margin: 5px 10px;*/
+}
+.flexBoxRow {
+  display: flex;
+  flex-direction: row;
+  /*margin: 5px 10px;*/
+  justify-content: space-around;
+  width: 450px;
+}

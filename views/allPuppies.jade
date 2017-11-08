@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1= title
+  p Here they are!
+  div.flexBoxColumn
+    div.flexBoxRow
+      p Name
+      p Breed
+      p Age
+      p Sex
+      //- br  
+    each puppy in puppies
+      div.flexBoxRow
+        p= puppy.name
+        p= puppy.breed
+        p= puppy.age
+        p= puppy.sex
+
+  p Add a puppy
+  form(action='/api/puppies', method='POST')
+    div.flexBoxColumn
+      label Please enter the puppy's name:
+        input(type='text', name='name')
+      label Please enter the puppy's breed:
+        input(type='text', name='breed')
+      label Please enter the puppy's age:
+        input(type='number', name='age')
+      label Please enter the puppy's gender:
+        input(type='text', name='gender')
+      button(type='submit') Add
